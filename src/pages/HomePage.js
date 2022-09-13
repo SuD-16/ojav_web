@@ -1,7 +1,15 @@
 import React from 'react';
-import home_page_css from '../assets/css/home_page_css.scss';
+
+
+import TopNavigation from "../components/TopNavigation.js";
 import header_image from "../assets/images/home_page_images/header_image.png";
 import HeaderImage from "../components/HeaderImage.js";
+import OurOfferingsBox from "../components/OurOfferingsBox.js";
+import RetreatCard from "../components/RetreatCard.js";
+import CourseSection from "../components/CourseSection.js";
+import TestimonialsSection from "../components/TestimonialsSection.js";
+import AyurvedicTreatmentSection from "../components/AyurvedicTreatmentSection";
+
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -11,9 +19,16 @@ class HomePage extends React.Component {
 
   render() {
     return <div className="home-page">
+      
+      <TopNavigation />
       <HeaderImage 
         href={header_image}
       />
+      <OurOfferingsBox />
+      <RetreatCard />
+      <CourseSection />
+      <TestimonialsSection />
+      <AyurvedicTreatmentSection />
     </div>;
   }
 }

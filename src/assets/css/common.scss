@@ -9,26 +9,213 @@ body{
 .top-navigation-bar{
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 1rem 2.5rem;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.06);
+}
 
+.logo-box{
+    height: 32px;
 }
 
 .logo{
     width: 10em;
 }
 
+nav{
+    align-items: center;
+    display:flex;
+    gap: 32px;
+}
+
+
 nav a{
-    margin-left: 2em;
     text-decoration: none;
     color: #24292B;
     font-weight: 700;
 }
 
 
-header img{
- width: 100%;
- object-fit: cover;
+/* Global Components Css*/
+
+.content-card{
+    width: 680px;
+    padding: 32px 24px;
+    text-align: left;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin-top: 24px;
 }
+
+.content--items{
+    margin:0;
+    margin-top: 32px;
+}
+
+h2{
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    color: #24292B;
+    margin: 0;
+}
+
+
+
+
+
+.h2-underline{
+    width: 27px;
+    height: 2px;
+    background: #373F42;
+    border-radius: 3px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+
+h4{
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    color: #3E4F55;
+    margin: 0;
+    max-width: 366px;
+    margin-bottom: 12px;
+}
+
+h5{
+    font-size: 20px;
+    font-weight:800;
+    line-height: 25px;
+    color: #3E4F55;
+    margin:0;
+}
+
+
+p{
+    margin:0;
+    margin-top: 16px;
+}
+
+ul{
+    margin:0;
+    margin-top: 10px;
+    margin-left: -12px;
+}
+
+p,
+li{
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #3E4F55;
+}
+
+
+
+li{
+    margin-bottom: 12px;
+}
+
+li:last-child{
+    margin-bottom: 0;
+}
+
+
+.schedule-table{
+    width: 100%;
+    border: 1px solid #BDCFD4;
+    border-collapse: collapse;
+    border-radius: 4px;
+}
+
+
+.schedule-table td{
+    text-align: left;
+    padding: 8px 16px;
+    border-right: 1px solid #E2EFF3;
+    font-weight: 600;
+    color: #373F42;
+}
+
+.schedule-table td:last-of-type{
+    border-right: none;
+}
+
+
+
+.schedule-table tbody{
+    background-color: #F3F9FB;
+}
+
+.schedule-table tbody:nth-child(even){
+    background-color: #FAFEFF; 
+}
+
+
+
+
+
+
+
+.top-header-area{
+    margin-top: 80px;
+}
+
+.header-container{
+    position:relative;
+    width: 100%;
+    align-items: center;
+    height: 425px;
+}
+
+.top-header-image{
+    width: 100%;
+    height: 425px;
+    object-fit: cover;
+    background-color: #373F42;
+    position: relative;
+}
+
+.header-dark-gradient{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 7.96%, #000000 100%);
+    mix-blend-mode: normal;
+}
+
+.course-h1-box{
+    position:absolute;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    min-height: 157px;
+    bottom: 0;
+}
+
+.course-h1{
+    position: absolute;
+    color: white;
+    bottom: 20px;
+    max-width: 680px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    line-height: 1.2em;
+    text-align: left;
+    margin: 0;
+}
+
 
 
 .h1-area{
@@ -43,7 +230,7 @@ header img{
     color: white;
     left: 20px;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding: 4px 10px;
 }
 
@@ -75,20 +262,27 @@ header img{
     align-items: center;
     display: flex;
     justify-content: space-between;
-    background-image: url(../images/home_page_images/transparent-bg-categories.png);
+    background-image: url(../images/home_page_images/transparent_bg_categories.png);
     background-repeat: no-repeat;
     padding: 35px 26px ;
+    height:99px;
 
 }
 
 .category{
  display: flex;
  flex-direction: column;
-
-
 }
 
-.category button{
+.category-img{
+    min-width: 150px;
+    max-width: 100%;
+    height:auto;
+    margin-top: 6.5rem;
+}
+
+
+.category-button{
  font-size: 14px;
  font-weight: 700;
  padding: 4px 12px;
@@ -99,29 +293,30 @@ header img{
  position: absolute;
  width: 192px;
  height: 40px;
- bottom: 25px;
+ bottom: -68px;
  align-self: center;
-
 }
 
 
 .category-box-area{
     top:-100px;
     position: relative;
-
 }
+
 
 .category-box img{
     max-width: 1076px;
 }
 
 
-
-
 .container {
     margin: 0 auto;
     max-width: 1076px;
 }
+
+
+
+
 
 @media only screen and (max-width: 600px) {
     
@@ -134,7 +329,7 @@ header img{
     }
     
     header img{
-        background: url(../images/home_page_images/mobile-header-image.png);
+        background: url(../images/home_page_images/mobile_header_image.png);
         width: 100%;
         height: 100%;
         object-fit:fill;
@@ -154,7 +349,7 @@ header img{
         color: white;
         left: 20px;
         margin: 0;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         padding: 4px 10px;
         text-align: center;
     }
@@ -174,24 +369,23 @@ header img{
     .category-box{
         margin: 0 auto;
         align-items: center;
-        background-image: url(../images/home_page_images/mobile-topheading-bg.svg);
+        background-image: url(../images/home_page_images/mobile_topheading_bg.svg);
         object-fit: cover;
         background-position: center center;
         background-clip: border-box;
         background-repeat: no-repeat;
         justify-content: center;
         width: 100%;
-        height: 40vh;
         top: 66px;
         display: inline-block;
         flex-flow: column;
         padding: 0;
         position: relative;
-            
+        height: 99px;
     
     }
 
-    .category-box img{
+    .category img{
         min-width: 150px;
         max-width: 100%;
         
@@ -212,7 +406,7 @@ header img{
        
     }
 
-    .category img{
+    .category-img{
         min-width: 150px;
 
     }
@@ -243,14 +437,13 @@ header img{
 /* Retreat Box CSS */
 
 .retreat-box-area{
-    background: url(../images/home_page_images/retreat-bg.svg);
+    background: url(../images/home_page_images/retreat_bg.svg);
     background-repeat: no-repeat;
     height: 459px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
+    margin-top: 40px;
 }
 
 .retreat-box-area img{
@@ -307,7 +500,7 @@ header img{
 @media only screen and (max-width: 600px) {
 
     .retreat-box-area{
-        background: url(../images/home_page_images/mobile-retreat-bg.svg);
+        background: url(../images/home_page_images/mobile_retreat_bg.svg);
         background-repeat: no-repeat;
         background-size: cover;
         max-width: fit-content;
@@ -398,7 +591,7 @@ header img{
 h2{
     font-family:  'DM Serif Display', serif; 
     font-size: 36px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin: 0;
     color: #24292B;
     display: inline;
@@ -462,7 +655,7 @@ h2{
 .testimonial-card{
     display: flex;
     justify-content: space-between;
-    background: url(../images/home_page_images/testomonial-bg.svg);
+    background: url(../images/home_page_images/testomonial_bg.svg);
     background-repeat: no-repeat;
     box-sizing: border-box;
     margin-top: 48px;
@@ -623,4 +816,16 @@ h2{
     border: 1px solid #3E4F55;
     border-radius: 4px;
     cursor: pointer;
+}
+
+
+
+
+
+/*extra css*/
+
+
+.row-data{
+    display: inline;
+
 }

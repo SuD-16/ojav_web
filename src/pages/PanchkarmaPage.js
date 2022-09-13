@@ -8,7 +8,7 @@ class PanchkarmaPage extends React.Component {
 	}
 
 	render() {
-		return <div>I am on panchkarmass page</div>
+		return <div>I am on panchkarma page</div>
 	}	
 }
 
